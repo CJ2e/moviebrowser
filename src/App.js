@@ -7,6 +7,7 @@ import Home from './components/Home';
 import MovieView from './components/MovieView';
 import Navbar from './components/Navbar';
 import SearchView from './components/SearchView';
+import View404 from './components/View404';
 
 function App() {
 	// const [variable to access, function] = sets state;
@@ -40,6 +41,7 @@ function App() {
 					}
 				/>
 				<Route path="/movies/:id" element={<MovieView />} />
+				<Route path="*" element={<View404 />} />
 			</Routes>
 			{/* <Footer /> */}
 		</div>
