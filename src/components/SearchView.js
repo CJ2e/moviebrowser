@@ -39,7 +39,7 @@ const MovieCard = ({ movie }) => {
 	);
 };
 
-const SearchView = ({ keyword, searchResults }) => {
+const SearchView = ({ keyword, searchResults, isSearchClicked }) => {
 	const title = `You are searching for ${keyword}`;
 
 	const resultsHtml = searchResults.map((obj, i) => {

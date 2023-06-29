@@ -4,13 +4,13 @@ const Navbar = ({ searchText, setSearchText }) => {
 	const navigate = useNavigate();
 
 	const updateSearchText = (e) => {
-		navigate('/search');
 		setSearchText(e.target.value);
 	};
-	// const navSearchText = (e) => {
-	// 	navigate('/search');
-	// 	setSearchText(e.target.value);
-	// };
+	const navigateToSearch = (e) => {
+		e.preventDefault();
+		navigate('/search?query=' + searchText);
+	};
+
 	return (
 		<nav className="navbar navbar-expand-lg bg-body-tertiary">
 			<div className="container-fluid">
@@ -53,7 +53,7 @@ const Navbar = ({ searchText, setSearchText }) => {
 						<button
 							className="btn btn-outline-success"
 							type="submit"
-							// onClick={navSearchText}
+							onClick={navigateToSearch}
 						>
 							Search
 						</button>
